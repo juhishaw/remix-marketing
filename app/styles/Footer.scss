@@ -1,0 +1,107 @@
+@import "../styles/mixin.scss";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  .group {
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+    color: #c9caff;
+    margin-bottom: 20px;
+    .left {
+      color: var(--w3f-bg-brand-color, #180c4a);
+      cursor: pointer;
+      text-align: center;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      span {
+        &:not(:last-child) {
+          margin-right: 24px;
+        }
+        &:last-child {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .links-grp {
+    border-radius: 24px;
+    background: #180c4a;
+    padding: 40px;
+    h1 {
+      margin-bottom: 24px;
+      color: #fff;
+      width: 360px;
+    }
+    h6 {
+      color: var(--White, #fff);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+    }
+    .right {
+      .footer-button-wrapper {
+        width: 100%;
+        margin-top: 48px;
+        button {
+          width: 100%;
+        }
+      }
+    }
+    .mail-section {
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      .icon-email {
+        margin-right: 10px;
+        color: #fff;
+      }
+    }
+  }
+
+  .nav-item {
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+  .icon-grp {
+    display: flex;
+    margin-top: 30px;
+    span {
+      cursor: pointer;
+      display: inline-block;
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.sm-txt-16 {
+  color: #fff;
+}
+
+@include respond-between(mobile, desktop) {
+  .footer {
+    margin: 30px;
+    .links-grp {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+  }
+}

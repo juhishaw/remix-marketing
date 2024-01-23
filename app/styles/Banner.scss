@@ -1,0 +1,33 @@
+@import "../styles/mixin.scss";
+
+.banner-wrraper {
+  // background: var(--w3f-bg-brand-colour, #180c4a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 524.055px;
+  margin-top: 80px;
+  background: url("app/assets/banner.png"), #180c4a;
+  background-repeat: no-repeat;
+
+  .text {
+    color: #fff;
+    width: 927px;
+
+    .link {
+      text-decoration-line: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+@include respond-between(mobile, desktop) {
+  .banner-wrraper {
+    height: 100%;
+    padding: 30px;
+    .text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

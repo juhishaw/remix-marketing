@@ -1,0 +1,133 @@
+@import "../styles/mixin.scss";
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 26px;
+  background: #fff;
+  .expand-btn {
+    display: none;
+  }
+  .logo-wrapper {
+    .logo {
+      background: url("app/assets/logo.png");
+      background-repeat: no-repeat;
+      width: 258px;
+      height: 48px;
+      background-size: contain;
+    }
+  }
+  .nav-list-wrapper {
+    .nav-list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      .nav-link-list {
+        color: var(--Gray-900, #131316);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        padding: 16px;
+
+        &:not(:last-child) {
+          margin-right: 15px;
+        }
+        &:hover {
+          color: #fd7702;
+        }
+        .active {
+          position: relative;
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            height: 2px;
+            width: 100%;
+            background: var(--w3f-gradient, linear-gradient(92deg, #12CAF3 4.52%, #3E8DF7 99.48%));
+          }
+        }
+      }
+    }
+  }
+
+  .sub-nav-list-wrapper {
+    .sub-nav-list {
+      padding: 10px;
+      @extend .nav-link-list;
+
+      &:hover {
+        color: #fd7702;
+      }
+    }
+  }
+}
+
+.expanded-nav-list {
+  padding: 75px 35px 35px 35px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  box-shadow: -4px 12px 36px 24px rgba(5, 6, 19, 0.5);
+  z-index: 999999;
+  background: #fff;
+  .nav-list-sm {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    li {
+      text-transform: capitalize;
+      cursor: pointer;
+      text-wrap: nowrap;
+      &:not(:last-child) {
+        margin-bottom: 35px;
+        margin-right: 0;
+      }
+    }
+
+    margin-bottom: 40px;
+  }
+  .nav-btn-sm {
+    width: 100%;
+  }
+  .cross {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  .txt-grp {
+    margin-top: 24px;
+    padding: 16px;
+    border-radius: 8px;
+    .sm-txt-18-bold {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+@include respond-between(mobile, tablet-portrait) {
+  nav {
+    justify-content: space-between;
+    .nav-btn-wrapper,
+    .nav-list-wrapper {
+      display: none;
+    }
+    .expand-btn {
+      display: block;
+      font-size: 40px;
+      cursor: pointer;
+    }
+
+    .expanded-nav-list {
+      .nav-btn-wrapper {
+        display: block;
+      }
+    }
+  }
+}

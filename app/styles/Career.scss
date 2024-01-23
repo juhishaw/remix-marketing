@@ -1,0 +1,95 @@
+@import "../styles/mixin.scss";
+
+.career-wrapper {
+  margin-top: 44px;
+  .banner {
+    background-image: url("app/assets/career.png");
+    width: 777px;
+    height: 542px;
+  }
+  .left-group {
+    h1 {
+      font-size: 65px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 80px;
+      letter-spacing: -2.6px;
+      margin-top: 66px;
+      span {
+        &.grad {
+          background: linear-gradient(92deg, #3dd5f7 4.52%, #3e8df7 99.48%);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+    h3 {
+      &.summary {
+        color: #010c1c;
+        width: 621px;
+        margin-top: 24px;
+      }
+    }
+    .button-wrapper-career {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 60px;
+      button {
+        .icon-arrow-right {
+          position: relative;
+          top: 3px;
+          left: 20px;
+        }
+      }
+    }
+  }
+}
+
+.txt-btn {
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  cursor: pointer;
+  .icon-arrow-right {
+    position: relative;
+    top: 2px;
+    left: 10px;
+    color: #fc8f01;
+  }
+}
+
+@include respond-between(mobile, desktop) {
+  .career-wrapper {
+    display: flex;
+    flex-direction: column;
+    .left-group {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-size: 48px;
+        margin-top: 0;
+        text-align: center;
+      }
+      h3.summary {
+        text-align: center;
+        width: 100%;
+      }
+      .button-wrapper-career {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        .txt-btn {
+          margin-left: 0;
+          margin-top: 15px;
+        }
+      }
+    }
+    .banner {
+      width: 100%;
+      height: 300px;
+      background-position: center;
+    }
+  }
+}
