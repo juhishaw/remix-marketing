@@ -78,11 +78,11 @@ MEDIA QUERIES MIXIN
   display: flex;
   margin-top: 30px;
 }
-.footer .icon-grp span {
+.footer .icon-grp a {
   cursor: pointer;
   display: inline-block;
 }
-.footer .icon-grp span:not(:last-child) {
+.footer .icon-grp a:not(:last-child) {
   margin-right: 20px;
 }
 

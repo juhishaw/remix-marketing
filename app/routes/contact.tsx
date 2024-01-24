@@ -1,7 +1,25 @@
-import { Form } from "@remix-run/react";
+import { Form, json, useNavigation } from "@remix-run/react";
 import RequestADemoStyles from "../styles/dist/RequestADemo.css";
 
+export async function action({ request }) {
+  const formData = await request.formData();
+  const investorInterest = {
+    message: formData.get("message"),
+    url: formData.get("url"),
+    organization: formData.get("organization"),
+    phoneNumber: formData.get("phoneNumber"),
+    email: formData.get("email"),
+    name: formData.get("name"),
+    organizationTitle: formData.get("organizationTitle"),
+  };
+
+  return json({ message: "failed" });
+}
+
 export default function ContactPage() {
+  const navigation = useNavigation();
+  const isSubmitting = navigation.state === "submitting";
+
   const data = [
     "Know Your Transaction",
     "Comprehensive Fraud Detection",
@@ -42,12 +60,12 @@ export default function ContactPage() {
                   />
                 </p>
                 <p className="form-group">
-                  <label htmlFor="name">Title</label>
+                  <label htmlFor="organizationTitle">Title</label>
                   <span className="icon icon-title"></span>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
+                    id="organizationTitle"
+                    name="organizationTitle"
                     placeholder="Head of Compliance"
                     required
                   />
@@ -66,12 +84,12 @@ export default function ContactPage() {
                   />
                 </p>
                 <p className="form-group">
-                  <label htmlFor="number">Phone number</label>
+                  <label htmlFor="phoneNumber">Phone number</label>
                   <span className="icon icon-phone"></span>
                   <input
                     type="text"
-                    id="number"
-                    name="number"
+                    id="phoneNumber"
+                    name="phoneNumber"
                     placeholder="+1 9187.654.3210"
                     required
                   />
@@ -79,12 +97,12 @@ export default function ContactPage() {
               </div>
               <div className="group">
                 <p className="form-group">
-                  <label htmlFor="companyName">Company Name</label>
+                  <label htmlFor="organization">Company Name</label>
                   <span className="icon icon-company-name"></span>
                   <input
                     type="text"
-                    id="companyName"
-                    name="companyName"
+                    id="organization"
+                    name="organization"
                     placeholder="Example Inc"
                     required
                   />
@@ -114,7 +132,15 @@ export default function ContactPage() {
                 </p>
               </div>
               <div className="form-actions">
-                <button className="full-btn py-4 px-6 text-base font-normal">Request a demo</button>
+                <button
+                  className="full-btn py-4 px-6 text-base font-normal"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Please wait..." : "Request a demo"}
+                </button>
+                <button className="full-btn py-4 px-6 text-base font-normal">
+                  Request a demo
+                </button>
               </div>
               <p className="privacy-wrapper">
                 By submitting this form, I agree to the{" "}

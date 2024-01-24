@@ -1,18 +1,26 @@
 import { useState } from "react";
 import landingStyles from "../styles/dist/Landing.css";
+import moduleStyles from "../styles/dist/Modules.css";
 import ContactForm from "./ContactForm";
 import KeyFeatures from "./KeyFeatures";
-import ModuleSection from "./Modules";
+// import ModuleSection from "./Modules";
 import Logo from "./Logo";
-import ParticlesSection from "./Particle";
+import cardData from "~/service/modules.service";
+// import ParticlesSection from "./Particle";
 
 export default function LandingPage() {
   const [isFlip, setIsFlip] = useState(false);
-  const [text, setText] = useState("");
+  const [data, setData] = useState(cardData);
 
   function handleFlip(text: string) {
     setIsFlip((flip) => !flip);
-    setText(text);
+
+    cardData.map((item, index) => {
+      if(item.name === text) {
+        item.cardFlip = !item.cardFlip
+      }
+    })
+    setData(cardData);
   }
 
   return (
@@ -39,7 +47,43 @@ export default function LandingPage() {
         <div className="bg-no-repeat bg-contain banner"></div>
       </div>
       <Logo />
-      <ModuleSection isFlip={isFlip} text={text} />
+      <div className="main-module-wrapper">
+        <ul className="modules-wrapper xl:container xl:mx-auto grid grid-cols-3">
+          {data.map(
+            ({ name, icon, summary, style, flipTxt, cardFlip }, index) => (
+              <li
+                key={index}
+                className={style + " flip-card" + (cardFlip ? " flip" : " ")}
+              >
+                <div className="flip-card-inner">
+                  <div className="flip-card-front">
+                    <div className="content">
+                      <div className="icon-wrapper flex items-center justify-center">
+                        <div className={icon + " icon " + style}></div>
+                      </div>
+                      <h6 className="title">{name}</h6>
+                      <h4 className="caption text-wrap">{summary}</h4>
+                      <button className="line-btn">Learn more</button>
+                    </div>
+                  </div>
+                  <div className="flip-card-back">
+                    <div className="content">
+                      <h6 className="title">{name}</h6>
+                      <ul>
+                        {flipTxt.map((item, index) => (
+                          <li key={index} className="flex items-start">
+                            <div className="txt">{item}</div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            )
+          )}
+        </ul>
+      </div>
       <div className="banner-wrraper">
         <h2 className="text">
           WebFirewall's{" "}
@@ -88,5 +132,8 @@ export default function LandingPage() {
 }
 
 export function links() {
-  return [{ rel: "stylesheet", href: landingStyles }];
+  return [
+    { rel: "stylesheet", href: landingStyles },
+    { rel: "stylesheet", href: moduleStyles },
+  ];
 }

@@ -1,5 +1,4 @@
 import { Form, useNavigation } from "@remix-run/react";
-import { LinksFunction } from "@remix-run/node";
 
 export default function ContactForm({text}) {
   const navigation = useNavigation();
@@ -7,7 +6,7 @@ export default function ContactForm({text}) {
 
   return (
     <>
-      <Form className="form-wrapper" method="post" id="note-form">
+      <Form className="form-wrapper" method="post" id="contact-form">
         <p className="form-group">
           <label htmlFor="name">Your Full Name</label>
           <span className="icon icon-user"></span>
@@ -20,12 +19,12 @@ export default function ContactForm({text}) {
           />
         </p>
         <p className="form-group">
-          <label htmlFor="name">Title</label>
+          <label htmlFor="organizationTitle">Title</label>
           <span className="icon icon-title"></span>
           <input
             type="text"
-            id="name"
-            name="name"
+            id="organizationTitle"
+            name="organizationTitle"
             placeholder="Head of Compliance"
             required
           />
@@ -42,23 +41,23 @@ export default function ContactForm({text}) {
           />
         </p>
         <p className="form-group">
-          <label htmlFor="number">Phone number</label>
+          <label htmlFor="phoneNumber">Phone number</label>
           <span className="icon icon-phone"></span>
           <input
             type="text"
-            id="number"
-            name="number"
+            id="phoneNumber"
+            name="phoneNumber"
             placeholder="+1 9187.654.3210"
             required
           />
         </p>
         <p className="form-group">
-          <label htmlFor="companyName">Company Name</label>
+          <label htmlFor="organization">Company Name</label>
           <span className="icon icon-company-name"></span>
           <input
             type="text"
-            id="companyName"
-            name="companyName"
+            id="organization"
+            name="organization"
             placeholder="Example Inc"
             required
           />
@@ -89,7 +88,7 @@ export default function ContactForm({text}) {
             className="full-btn py-4 px-6 text-base font-normal"
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Please wair..." : text}
+            {isSubmitting ? "Please wait..." : text}
           </button>
         </div>
         <p className="privacy-wrapper">
