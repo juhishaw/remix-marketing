@@ -78,12 +78,12 @@ function MainNavigation() {
         </button>
       </div>
       <div className="expand-btn" data-btn-open onClick={handleToggle}>
-        <i className="icon-url"></i>
+        <i className="icon-hamburger"></i>
       </div>
       {isOpen && (
         <div className="expanded-nav-list">
           <div className="cross" onClick={handleToggle}>
-            X
+            <span className="icon-close"></span>
           </div>
           <ul className="nav-list-sm">
             <li>

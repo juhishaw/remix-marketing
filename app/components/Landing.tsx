@@ -6,6 +6,7 @@ import KeyFeatures from "./KeyFeatures";
 // import ModuleSection from "./Modules";
 import Logo from "./Logo";
 import cardData from "~/service/modules.service";
+import { Link } from "@remix-run/react";
 // import ParticlesSection from "./Particle";
 
 export default function LandingPage() {
@@ -16,10 +17,10 @@ export default function LandingPage() {
     setIsFlip((flip) => !flip);
 
     cardData.map((item, index) => {
-      if(item.name === text) {
-        item.cardFlip = !item.cardFlip
+      if (item.name === text) {
+        item.cardFlip = !item.cardFlip;
       }
-    })
+    });
     setData(cardData);
   }
 
@@ -40,7 +41,7 @@ export default function LandingPage() {
           </h3>
           <div className="button-wrapper">
             <button className="py-4 px-6 text-base font-normal full-btn">
-              Sign Up for Early Access
+              <Link to="/contact">Sign Up for Early Access</Link>
             </button>
           </div>
         </div>

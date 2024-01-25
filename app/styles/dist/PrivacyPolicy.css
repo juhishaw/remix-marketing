@@ -1,0 +1,49 @@
+/*
+===================
+MEDIA QUERIES MIXIN
+===================
+*/
+.privacy-policy-wrapper .banner-wrraper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 524.055px;
+  margin-bottom: 80px;
+  background: url("app/assets/banner.png"), #180c4a;
+  background-repeat: no-repeat;
+}
+.privacy-policy-wrapper .banner-wrraper h1 {
+  color: #fff;
+}
+.privacy-policy-wrapper .banner-wrraper h4 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  margin-top: 18px;
+}
+.privacy-policy-wrapper .summary .summary-txt {
+  margin-bottom: 40px;
+}
+.privacy-policy-wrapper .summary .group {
+  background: rgba(237, 244, 255, 0.5);
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+.privacy-policy-wrapper .summary .group h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 599px) and (max-width: 1199px) {
+  .privacy-policy-wrapper .banner-wrraper {
+    margin-bottom: 20px;
+  }
+  .summary {
+    margin: 40px;
+  }
+}

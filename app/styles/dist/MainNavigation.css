@@ -103,6 +103,14 @@ nav .sub-nav-list-wrapper .sub-nav-list:hover {
   margin-bottom: 16px;
 }
 
+.icon-hamburger, .icon-close {
+  background: linear-gradient(92deg, #3dd5f7 4.52%, #3e8df7 99.48%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
 @media (min-width: 599px) and (max-width: 779px) {
   nav {
     justify-content: space-between;

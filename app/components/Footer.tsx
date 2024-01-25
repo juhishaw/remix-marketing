@@ -29,14 +29,14 @@ export default function FooterSection() {
                 <li className="nav-item normal-txt-20 scale-animate">
                   <NavLink to="/partnership">Partnerships</NavLink>
                 </li>
+                <li className="nav-item normal-txt-20 scale-animate">
+                  <NavLink to="/aboutUs">About Us</NavLink>
+                </li>
               </ul>
             </div>
 
             <div className="block">
               <ul className="nav flex-column">
-                <li className="nav-item normal-txt-20 scale-animate">
-                  <NavLink to="/aboutUs">About Us</NavLink>
-                </li>
                 <li className="nav-item normal-txt-20 no-margin scale-animate">
                   <NavLink to="/career">Career</NavLink>
                 </li>

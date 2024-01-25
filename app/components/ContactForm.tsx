@@ -1,6 +1,6 @@
-import { Form, useNavigation } from "@remix-run/react";
+import { Form, Link, useNavigation } from "@remix-run/react";
 
-export default function ContactForm({text}) {
+export default function ContactForm({ text }) {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
 
@@ -94,7 +94,9 @@ export default function ContactForm({text}) {
         <p className="privacy-wrapper">
           By submitting this form, I agree to the{" "}
           <span className="privacy-txt scale-animate">
-            <span className="text">privacy policy</span>
+            <span className="text">
+              <Link to="/privacy-policy">privacy policy</Link>
+            </span>
           </span>
           .
         </p>

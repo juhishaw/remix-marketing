@@ -111,6 +111,14 @@ nav {
   }
 }
 
+.icon-hamburger, .icon-close {
+  background: linear-gradient(92deg, #3dd5f7 4.52%, #3e8df7 99.48%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  cursor: pointer;
+}
+
 @include respond-between(mobile, tablet-portrait) {
   nav {
     justify-content: space-between;

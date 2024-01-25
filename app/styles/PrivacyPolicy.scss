@@ -1,0 +1,54 @@
+@import "../styles/mixin.scss";
+
+.privacy-policy-wrapper {
+  .banner-wrraper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 524.055px;
+    margin-bottom: 80px;
+    background: url("app/assets/banner.png"), #180c4a;
+    background-repeat: no-repeat;
+
+    h1 {
+      color: #fff;
+    }
+    h4 {
+      color: #fffc;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 150%;
+      margin-top: 18px;
+    }
+  }
+
+  .summary {
+    .summary-txt {
+      margin-bottom: 40px;
+    }
+    .group {
+      background: rgba(237, 244, 255, 0.5);
+      padding: 20px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      h3 {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+@include respond-between(mobile, desktop) {
+    .privacy-policy-wrapper {
+        .banner-wrraper {
+            margin-bottom: 20px;
+        }
+    }
+    .summary {
+        margin: 40px;
+    }
+}
