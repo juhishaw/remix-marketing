@@ -92,7 +92,21 @@
   color: #fff;
 }
 
-@include respond-between(mobile, desktop) {
+@include respond-between(mobile, md-mobile) {
+  .footer {
+    margin: 30px;
+    .links-grp {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include respond-between(md-mobile, desktop) {
   .footer {
     margin: 30px;
     .links-grp {

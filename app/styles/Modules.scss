@@ -161,7 +161,35 @@
   }
 }
 
-@include respond-between(mobile, desktop) {
+@include respond-between(mobile, md-mobile) {
+  .modules-wrapper {
+    display: flex;
+    margin: 30px;
+    flex-direction: column;
+    .flip-card {
+      .flip-card-inner {
+        padding: 20px;
+        .flip-card-front {
+          .caption {
+            text-align: center;
+          }
+          .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+          }
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@include respond-between(md-mobile, desktop) {
   .modules-wrapper {
     display: flex;
     margin: 30px;

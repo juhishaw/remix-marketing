@@ -92,7 +92,13 @@ label {
   }
 }
 
-@include respond-between(mobile, desktop) {
+@include respond-between(mobile, md-mobile)  {
+  .form-wrapper {
+    width: 100%;
+  }
+}
+
+@include respond-between(md-mobile, desktop) {
   .form-wrapper {
     width: 100%;
   }

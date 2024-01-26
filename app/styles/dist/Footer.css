@@ -90,7 +90,20 @@ MEDIA QUERIES MIXIN
   color: #fff;
 }
 
-@media (min-width: 599px) and (max-width: 1199px) {
+@media (min-width: 425px) and (max-width: 699px) {
+  .footer {
+    margin: 30px;
+  }
+  .footer .links-grp {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .links-grp h1 {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+@media (min-width: 700px) and (max-width: 1199px) {
   .footer {
     margin: 30px;
   }

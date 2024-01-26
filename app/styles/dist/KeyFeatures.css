@@ -93,7 +93,29 @@ MEDIA QUERIES MIXIN
   right: 25%;
 }
 
-@media (min-width: 599px) and (max-width: 1199px) {
+@media (min-width: 425px) and (max-width: 699px) {
+  .key-features-wrapper {
+    margin: 15px;
+    padding: 15px;
+  }
+  .key-features-wrapper h2 {
+    font-size: 22px;
+  }
+  .key-features-wrapper .key-feature-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .key-features-wrapper .key-feature-list li {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .key-features-wrapper .key-feature-list li .right {
+    text-align: center;
+  }
+}
+@media (min-width: 700px) and (max-width: 1199px) {
   .key-features-wrapper {
     margin: 20px;
     padding: 20px;

@@ -42,13 +42,24 @@
   }
 }
 
-@include respond-between(mobile, desktop) {
-    .privacy-policy-wrapper {
-        .banner-wrraper {
-            margin-bottom: 20px;
-        }
+@include respond-between(mobile, md-mobile) {
+  .privacy-policy-wrapper {
+    .banner-wrraper {
+      margin-bottom: 20px;
     }
-    .summary {
-        margin: 40px;
+  }
+  .summary {
+    margin: 40px;
+  }
+}
+
+@include respond-between(md-mobile, desktop) {
+  .privacy-policy-wrapper {
+    .banner-wrraper {
+      margin-bottom: 20px;
     }
+  }
+  .summary {
+    margin: 40px;
+  }
 }

@@ -124,7 +124,30 @@ MEDIA QUERIES MIXIN
   text-transform: uppercase;
 }
 
-@media (min-width: 599px) and (max-width: 1199px) {
+@media (min-width: 425px) and (max-width: 699px) {
+  .modules-wrapper {
+    display: flex;
+    margin: 30px;
+    flex-direction: column;
+  }
+  .modules-wrapper .flip-card .flip-card-inner {
+    padding: 20px;
+  }
+  .modules-wrapper .flip-card .flip-card-inner .flip-card-front .caption {
+    text-align: center;
+  }
+  .modules-wrapper .flip-card .flip-card-inner .flip-card-front .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .modules-wrapper .flip-card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 700px) and (max-width: 1199px) {
   .modules-wrapper {
     display: flex;
     margin: 30px;

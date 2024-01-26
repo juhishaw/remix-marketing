@@ -80,8 +80,58 @@
   position: absolute;
   z-index: 0;
 }
+@include respond-between(mobile, md-mobile) {
+  .landing-wrapper {
+    display: flex;
+    flex-direction: column;
+    .banner {
+      left: 0;
+    }
+    .left-group {
+      h1 {
+        font-size: 30px;
+        text-align: center;
+        margin-top: 0;
+      }
+      .summary {
+        text-align: center;
+        margin: 0 30px;
+      }
+      .button-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .banner {
+      width: 100%;
+      height: 354px;
+      background-position: center;
+    }
+    .main-bg {
+      width: 100%;
+      left: auto;
+      top: auto;
+      transform: none;
+    }
+  }
 
-@include respond-between(mobile, desktop) {
+  .bg-container {
+    .right-bg {
+      right: 0;
+      width: 100%;
+      height: 400px;
+    }
+  }
+
+  .bg-container {
+    .bg-wrapper {
+      width: 100%;
+      height: 300px;
+    }
+  }
+}
+@include respond-between(md-mobile, desktop) {
   .landing-wrapper {
     display: flex;
     flex-direction: column;

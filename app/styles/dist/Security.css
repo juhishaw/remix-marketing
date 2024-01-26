@@ -82,7 +82,29 @@ MEDIA QUERIES MIXIN
   margin-bottom: 10px;
 }
 
-@media (min-width: 599px) and (max-width: 1199px) {
+@media (min-width: 425px) and (max-width: 699px) {
+  .security-wrapper .banner {
+    height: 50vh;
+  }
+  .security-wrapper .banner .left-group {
+    width: 100%;
+    top: 10%;
+    left: 0;
+    padding: 20px;
+  }
+  .security-wrapper .security-listing li {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .security-wrapper .security-listing li .info-wrapper {
+    text-align: center;
+  }
+}
+@media (min-width: 700px) and (max-width: 1199px) {
   .security-wrapper .banner {
     height: 75vh;
   }

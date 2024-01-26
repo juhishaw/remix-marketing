@@ -55,7 +55,42 @@ MEDIA QUERIES MIXIN
   color: #fc8f01;
 }
 
-@media (min-width: 599px) and (max-width: 1199px) {
+@media (min-width: 425px) and (max-width: 699px) {
+  .career-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .career-wrapper .left-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  .career-wrapper .left-group h1 {
+    font-size: 30px;
+    margin-top: 0;
+    text-align: center;
+  }
+  .career-wrapper .left-group h3.summary {
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+  }
+  .career-wrapper .left-group .button-wrapper-career {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .career-wrapper .left-group .button-wrapper-career .txt-btn {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  .career-wrapper .banner {
+    width: 100%;
+    height: 300px;
+    background-position: center;
+  }
+}
+@media (min-width: 700px) and (max-width: 1199px) {
   .career-wrapper {
     display: flex;
     flex-direction: column;

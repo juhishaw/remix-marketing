@@ -39,7 +39,8 @@ MEDIA QUERIES MIXIN
 // $big-desktop: 1800px;
 
 $breakpoints: (
-  mobile: 599px,
+  mobile: 425px,
+  md-mobile: 700px,
   tablet-portrait: 780px,
   tablet-landscape: 900px,
   desktop: 1200px,

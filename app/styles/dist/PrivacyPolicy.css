@@ -39,7 +39,15 @@ MEDIA QUERIES MIXIN
   margin-bottom: 10px;
 }
 
-@media (min-width: 599px) and (max-width: 1199px) {
+@media (min-width: 425px) and (max-width: 699px) {
+  .privacy-policy-wrapper .banner-wrraper {
+    margin-bottom: 20px;
+  }
+  .summary {
+    margin: 40px;
+  }
+}
+@media (min-width: 700px) and (max-width: 1199px) {
   .privacy-policy-wrapper .banner-wrraper {
     margin-bottom: 20px;
   }

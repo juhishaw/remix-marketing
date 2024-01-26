@@ -83,7 +83,12 @@ label {
   font-size: 24px;
 }
 
-@media (min-width: 599px) and (max-width: 1199px) {
+@media (min-width: 425px) and (max-width: 699px) {
+  .form-wrapper {
+    width: 100%;
+  }
+}
+@media (min-width: 700px) and (max-width: 1199px) {
   .form-wrapper {
     width: 100%;
   }

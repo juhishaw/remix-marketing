@@ -21,7 +21,17 @@
   }
 }
 
-@include respond-between(mobile, desktop) {
+@include respond-between(mobile, md-mobile) {
+  .banner-wrraper {
+    height: 100%;
+    padding: 30px;
+    .text {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+@include respond-between(md-mobile, desktop) {
   .banner-wrraper {
     height: 100%;
     padding: 30px;

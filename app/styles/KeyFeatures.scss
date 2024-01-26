@@ -108,7 +108,30 @@
   }
 }
 
-@include respond-between(mobile, desktop) {
+@include respond-between(mobile, md-mobile) {
+  .key-features-wrapper {
+    margin: 15px;
+    padding: 15px;
+    h2 {
+      font-size: 22px;
+    }
+    .key-feature-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      li {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .right {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@include respond-between(md-mobile, desktop) {
   .key-features-wrapper {
     margin: 20px;
     padding: 20px;
