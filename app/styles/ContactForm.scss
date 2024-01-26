@@ -96,10 +96,21 @@ label {
   .form-wrapper {
     width: 100%;
   }
+
+  .privacy-wrapper {
+    .privacy-txt {
+      margin-top: 5px;
+    }
+  }
 }
 
 @include respond-between(md-mobile, desktop) {
   .form-wrapper {
     width: 100%;
+  }
+  .privacy-wrapper {
+    .privacy-txt {
+      margin-top: 5px;
+    }
   }
 }

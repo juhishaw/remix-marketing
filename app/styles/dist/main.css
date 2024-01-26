@@ -218,7 +218,7 @@ h4 {
   line-height: normal;
 }
 
-h4 {
+h5 {
   font-size: 24px;
   font-style: normal;
   font-weight: 800;
@@ -303,6 +303,9 @@ h6 {
   h3 {
     font-size: 16px;
   }
+  h4 {
+    font-size: 20px;
+  }
   .contact-wrapper {
     margin: 40px;
     display: flex;
@@ -345,6 +348,9 @@ h6 {
   }
   h3 {
     font-size: 20px;
+  }
+  h4 {
+    font-size: 22px;
   }
   .contact-wrapper {
     margin: 40px;

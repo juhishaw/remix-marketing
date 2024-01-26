@@ -87,9 +87,15 @@ label {
   .form-wrapper {
     width: 100%;
   }
+  .privacy-wrapper .privacy-txt {
+    margin-top: 5px;
+  }
 }
 @media (min-width: 700px) and (max-width: 1199px) {
   .form-wrapper {
     width: 100%;
+  }
+  .privacy-wrapper .privacy-txt {
+    margin-top: 5px;
   }
 }

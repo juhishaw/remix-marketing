@@ -100,6 +100,7 @@ MEDIA QUERIES MIXIN
   }
   .key-features-wrapper h2 {
     font-size: 22px;
+    margin-bottom: 40px;
   }
   .key-features-wrapper .key-feature-list {
     display: flex;
@@ -110,9 +111,21 @@ MEDIA QUERIES MIXIN
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 15px;
   }
   .key-features-wrapper .key-feature-list li .right {
     text-align: center;
+  }
+  .key-features-wrapper .key-feature-list li .right .title {
+    text-align: center;
+    width: 100%;
+  }
+  .key-features-wrapper .key-feature-list li .icon-wrapper {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  .key-features-wrapper .button-wrapper button::after {
+    right: 10%;
   }
 }
 @media (min-width: 700px) and (max-width: 1199px) {
@@ -122,10 +135,25 @@ MEDIA QUERIES MIXIN
   }
   .key-features-wrapper h2 {
     font-size: 48px;
+    margin-bottom: 40px;
   }
   .key-features-wrapper .key-feature-list {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+  .key-features-wrapper .key-feature-list li {
+    margin: 15px;
+  }
+  .key-features-wrapper .key-feature-list li .right .title {
+    text-align: center;
+    width: 100%;
+  }
+  .key-features-wrapper .key-feature-list li .icon-wrapper {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+  .key-features-wrapper .button-wrapper button::after {
+    right: 10%;
   }
 }

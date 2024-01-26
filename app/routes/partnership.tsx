@@ -1,7 +1,22 @@
 import ContactForm from "~/components/ContactForm";
 import contactFormStyles from "../styles/dist/ContactForm.css";
-import { LinksFunction } from "@remix-run/node";
+import { LinksFunction, json } from "@remix-run/node";
 import partnershipStyles from "../styles/dist/Partnership.css";
+
+export async function action({ request }) {
+  const formData = await request.formData();
+  const investorInterest = {
+    message: formData.get("message"),
+    url: formData.get("url"),
+    organization: formData.get("organization"),
+    phoneNumber: formData.get("phoneNumber"),
+    email: formData.get("email"),
+    name: formData.get("name"),
+    organizationTitle: formData.get("organizationTitle"),
+  };
+
+  return json({ message: "failed" });
+}
 
 export default function PartnershipPage() {
   return (
@@ -23,7 +38,7 @@ export default function PartnershipPage() {
           <div className="bg-no-repeat bg-contain partner-banner"></div>
         </div>
         <div className="contact-wrapper grid grid-cols-2 gap-4 xl:container xl:mx-auto">
-        <div className="bg"></div>
+          <div className="bg"></div>
           <div className="left">
             <h1>Ready to take back your time?</h1>
             <div className="summary">
@@ -44,7 +59,7 @@ export default function PartnershipPage() {
             </div>
             <div className="contanct-banner"></div>
           </div>
-          <ContactForm text={'Become A Partner'} />
+          <ContactForm text={"Become A Partner"} />
         </div>
       </div>
     </main>

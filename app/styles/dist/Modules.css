@@ -143,6 +143,9 @@ MEDIA QUERIES MIXIN
     align-items: center;
     height: 100%;
   }
+  .modules-wrapper .flip-card .flip-card-inner .flip-card-back ul li {
+    font-size: 14px;
+  }
   .modules-wrapper .flip-card:not(:last-child) {
     margin-bottom: 30px;
   }

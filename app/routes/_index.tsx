@@ -1,7 +1,9 @@
 import {
   json,
+  MetaFunction,
   type LinksFunction,
   type LoaderFunctionArgs,
+  ActionFunctionArgs,
 } from "@remix-run/node";
 import homeStyles from "../styles/dist/main.css";
 import MainNavStyles from "../styles/dist/MainNavigation.css";
@@ -12,20 +14,47 @@ import bannerStyles from "../styles/dist/Banner.css";
 import keyFeaturesStyles from "../styles/dist/KeyFeatures.css";
 import contactFormStyles from "../styles/dist/ContactForm.css";
 
-export async function action({ request }) {
-  const formData = await request.formData();
+export const meta: MetaFunction = () => {
+  return [
+    { title: 'Web3Firewall' },
+    { name: 'description', content: 'Web3Firewall' },
+  ]
+}
+
+export async function action({ request, context }: ActionFunctionArgs) {
+  const body = await request.formData();
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const investorInterest = {
-    message: formData.get("message"),
-    url: formData.get("url"),
-    organization: formData.get("organization"),
-    phoneNumber: formData.get("phoneNumber"),
-    email: formData.get("email"),
-    name: formData.get("name"),
-    organizationTitle: formData.get("organizationTitle"),
+    message: body.get("message"),
+    url: body.get("url"),
+    organization: body.get("organization"),
+    phoneNumber: body.get("phoneNumber"),
+    email: body.get("email"),
+    name: body.get("name"),
+    organizationTitle: body.get("organizationTitle"),
   };
+
+//   if (
+//     await sendToSlack(
+//       context,
+//       `Joining the waiting list:
+// Organization: \`${investorInterest.organization}\`
+// Organization Website: \`${investorInterest.url}\`
+// Contact: \`${investorInterest.name}\`
+// Title: \`${investorInterest.organizationTitle}\`
+// Email: \`${investorInterest.email}\`
+// Phone Number: \`${investorInterest.phoneNumber}\`
+// Organization: \`${investorInterest.organization}\`
+// Message: \`${investorInterest.message}\``
+//     )
+//   ) {
+//     console.log("Success!");
+//     return json({ message: "succeeded" });
+//   }
 
   return json({ message: "failed" });
 }
+
 
 export default function Index() {
   return (

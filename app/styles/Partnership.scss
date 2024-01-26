@@ -73,6 +73,32 @@
           width: 100%;
         }
         h3 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@include respond-between(md-mobile, desktop) {
+  .partnership-wrapper {
+    .banner {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 40px;
+      .partner-banner {
+        width: 100%;
+        height: 300px;
+        background-position: center;
+      }
+      .left-group {
+        text-align: center;
+        h6 {
+          text-align: center;
+          width: 100%;
+        }
+        h3 {
           font-size: 20px;
         }
       }
