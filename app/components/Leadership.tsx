@@ -1,5 +1,3 @@
-import { Link } from "@remix-run/react";
-
 export default function LeadershipSection() {
   const leadership = [
     {
@@ -52,9 +50,13 @@ export default function LeadershipSection() {
                   <div className="user-info">
                     <div className="group">
                       <h4 className="name">{item.name}</h4>
-                      <Link to={item.url} target="_blank">
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <span className="icon-lkdn"></span>
-                      </Link>
+                      </a>
                     </div>
                     <div className="sepeartor"></div>
                     <h3 className="title">{item.title}</h3>

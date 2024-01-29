@@ -1,3 +1,5 @@
+import ValueItem from "./ValueItem";
+
 export default function OurValuesSection() {
   const values = [
     {
@@ -44,15 +46,7 @@ export default function OurValuesSection() {
         <div className="value-listing">
           <ul className="">
             {values.map((item, index) => (
-              <li key={index} className="value-listing-items common-listing-items-blue animate pop">
-                <div className="right flex flex-col items-start">
-                  <div className="blue-icon-wrapper">
-                    <div className={item.icon + " icon"}></div>
-                  </div>
-                  <h4 className="title">{item.name}</h4>
-                  <h6 className="summary">{item.summary}</h6>
-                </div>
-              </li>
+               <ValueItem key={index}  {...item} />
             ))}
           </ul>
         </div>
