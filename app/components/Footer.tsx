@@ -1,4 +1,6 @@
-import { Link, NavLink } from "@remix-run/react";
+import { Link } from "@remix-run/react";
+import SocialLink from "./SocialLink";
+import FooterLink from "./FooterLink";
 
 export default function FooterSection() {
   return (
@@ -11,46 +13,30 @@ export default function FooterSection() {
             <div className="grad-txt">sales&#64;web3firewall.xyz</div>
           </h6>
           <div className="icon-grp">
-            <a
+            <SocialLink
               href="https://www.linkedin.com/company/web3firewall/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="grad-txt icon-lkdn"></span>
-            </a>
-            <a
+              iconClass="icon-lkdn"
+            />
+            <SocialLink
               href="https://twitter.com/?lang=en"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span className="grad-txt icon-twitter"></span>
-            </a>
+              iconClass="icon-twitter"
+            />
           </div>
         </div>
         <div className="right">
           <div className="wrapper grid grid-cols-2 gap-4">
             <div className="block">
               <ul className="nav flex-column">
-                <li className="nav-item normal-txt-20 scale-animate">
-                  <NavLink to="/">Home</NavLink>
-                </li>
-                <li className="nav-item normal-txt-20 scale-animate">
-                  <NavLink to="/partnership">Partnerships</NavLink>
-                </li>
-                <li className="nav-item normal-txt-20 scale-animate">
-                  <NavLink to="/aboutUs">About Us</NavLink>
-                </li>
+                <FooterLink to="/" text="Home" />
+                <FooterLink to="/partnership" text="Partnerships" />
+                <FooterLink to="/aboutUs" text="About Us" />
               </ul>
             </div>
 
             <div className="block">
               <ul className="nav flex-column">
-                <li className="nav-item normal-txt-20 no-margin scale-animate">
-                  <NavLink to="/career">Career</NavLink>
-                </li>
-                <li className="nav-item normal-txt-20 no-margin scale-animate">
-                  <NavLink to="/security">Security</NavLink>
-                </li>
+                <FooterLink to="/career" text="Career" />
+                <FooterLink to="/security" text="Security" />
               </ul>
             </div>
           </div>
@@ -67,9 +53,11 @@ export default function FooterSection() {
       </div>
       <div className="group justify-center">
         <div className="left">
-          <span>© 2023 Web3Firewall, Inc</span>
+          <span>© 2024 Web3Firewall, Inc</span>
           <span>All Rights Reserved</span>
-          <span className="pointer scale-animate"> Privacy Policy</span>
+          <span className="pointer scale-animate">
+            <Link to="/privacy-policy">Privacy Policy</Link>
+          </span>
         </div>
       </div>
     </footer>
