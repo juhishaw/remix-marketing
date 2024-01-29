@@ -7,22 +7,20 @@ import KeyFeatures from "./KeyFeatures";
 import Logo from "./Logo";
 import cardData from "~/service/modules.service";
 import { Link } from "@remix-run/react";
+import Card from "./Card";
+import BannerWrapper from "./BannerWrapper";
 // import ParticlesSection from "./Particle";
 
 export default function LandingPage() {
-  const [isFlip, setIsFlip] = useState(false);
   const [data, setData] = useState(cardData);
 
-  function handleFlip(text: string) {
-    setIsFlip((flip) => !flip);
-
-    cardData.map((item, index) => {
-      if (item.name === text) {
-        item.cardFlip = !item.cardFlip;
-      }
-    });
-    setData(cardData);
-  }
+  const handleFlip = (text: string) => {
+    setData((prevData) =>
+      prevData.map((item) =>
+        item.name === text ? { ...item, isFlip: !item.isFlip } : item
+      )
+    );
+  };
 
   return (
     <>
@@ -50,59 +48,12 @@ export default function LandingPage() {
       <Logo />
       <div className="main-module-wrapper">
         <ul className="modules-wrapper xl:container xl:mx-auto grid grid-cols-3">
-          {data.map(
-            ({ name, icon, summary, style, flipTxt, cardFlip }, index) => (
-              <li
-                key={index}
-                className={style + " flip-card" + (cardFlip ? " flip" : " ")}
-              >
-                <div className="flip-card-inner">
-                  <div className="flip-card-front">
-                    <div className="content">
-                      <div className="icon-wrapper flex items-center justify-center">
-                        <div className={icon + " icon " + style}></div>
-                      </div>
-                      <h6 className="title">{name}</h6>
-                      <h4 className="caption text-wrap">{summary}</h4>
-                      <button className="line-btn">Learn more</button>
-                    </div>
-                  </div>
-                  <div className="flip-card-back">
-                    <div className="content">
-                      <h6 className="title">{name}</h6>
-                      <ul>
-                        {flipTxt.map((item, index) => (
-                          <li key={index} className="flex items-start">
-                            <div className="txt">{item}</div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            )
-          )}
+          {data.map((card, index) => (
+            <Card key={index} {...card} handleFlip={handleFlip} />
+          ))}
         </ul>
       </div>
-      <div className="banner-wrraper">
-        <h2 className="text">
-          WebFirewall's{" "}
-          <span className="link" onClick={() => handleFlip("Governance")}>
-            governance
-          </span>
-          ,{" "}
-          <span className="link" onClick={() => handleFlip("Risk")}>
-            risk
-          </span>
-          , and{" "}
-          <span className="link" onClick={() => handleFlip("compliance")}>
-            compliance{" "}
-          </span>{" "}
-          capabilities seamlessly integrate with your existing workflows,
-          empowering you to unleash innovation.
-        </h2>
-      </div>
+      <BannerWrapper handleFlip={handleFlip} />
       <KeyFeatures />
       <div className="contact-wrapper grid grid-cols-2 gap-4 xl:container xl:mx-auto">
         <div className="bg"></div>

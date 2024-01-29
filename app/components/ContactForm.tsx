@@ -1,6 +1,10 @@
 import { Form, Link, useNavigation } from "@remix-run/react";
 
-export default function ContactForm({ text }) {
+interface ContactFormProps {
+  text: string;
+}
+
+export default function ContactForm({ text }: ContactFormProps) {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
 
@@ -36,7 +40,7 @@ export default function ContactForm({ text }) {
             type="email"
             id="email"
             name="email"
-            placeholder="Head of Compliance"
+            placeholder="jdoe@example.com"
             required
           />
         </p>
@@ -47,7 +51,7 @@ export default function ContactForm({ text }) {
             type="text"
             id="phoneNumber"
             name="phoneNumber"
-            placeholder="+1 9187.654.3210"
+            placeholder="+1 987.654.3210"
             required
           />
         </p>

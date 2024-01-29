@@ -17,7 +17,6 @@ input {
 
 textarea {
   display: flex;
-  height: 140px;
   padding: 16px;
   padding: 15px;
   align-items: flex-start;
@@ -26,6 +25,12 @@ textarea {
   border: 1px solid #e7eaee;
   background: rgba(255, 255, 255, 0.05);
   resize: none;
+}
+textarea.social-txtarea {
+  height: 80px;
+}
+textarea.msg-txtarea {
+  height: 140px;
 }
 
 label {

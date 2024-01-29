@@ -2,10 +2,18 @@ import { Link, NavLink } from "@remix-run/react";
 import { useState } from "react";
 
 function MainNavigation() {
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  function handleToggle() {
-    setIsOpen((show) => !show);
-  }
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+  };
+  const closeDropdown = () => {
+    setDropdownVisible(false);
+  };
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
     <nav>
@@ -17,57 +25,79 @@ function MainNavigation() {
       <div className="nav-list-wrapper">
         <ul className="nav-list">
           <li className="nav-link-list">
-            <NavLink className="nav-link-item" to="/partnership">
+            <NavLink
+              className="nav-link-item"
+              to="/partnership"
+              onClick={closeDropdown}
+            >
               Partnership
             </NavLink>
           </li>
           <li className="nav-link-list">
-            <button
-              id="dropdownNavbarLink"
-              data-dropdown-toggle="dropdownNavbar"
-              className="flex items-center justify-between w-full py-2 px-3  md:p-0 md:w-auto"
-            >
-              Company
-              <svg
-                className="w-2.5 h-2.5 ms-2.5"
-                aria-hidden="true"
-                xmlns="http:www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 10 6"
+            <div>
+              <button
+                id="dropdownNavbarLink"
+                data-dropdown-toggle="dropdownNavbar"
+                className="flex items-center justify-between w-full py-2 px-3  md:p-0 md:w-auto"
+                onClick={toggleDropdown}
               >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="m1 1 4 4 4-4"
-                />
-              </svg>
-            </button>
-            <div
-              id="dropdownNavbar"
-              className="hidden bg-white font-normalrounded-lg shadow w-44"
-            >
-              <ul
-                className="sub-nav-list-wrapper"
-                aria-labelledby="dropdownLargeButton"
-              >
-                <li className="sub-nav-list">
-                  <NavLink className="sub-nav-link-items" to="/aboutUs">
-                    About Us
-                  </NavLink>
-                </li>
-                <li className="sub-nav-list">
-                  <NavLink className="sub-nav-link-items" to="/career">
-                    Career
-                  </NavLink>
-                </li>
-                <li className="sub-nav-list">
-                  <NavLink className="sub-nav-link-items" to="/security">
-                    Security
-                  </NavLink>
-                </li>
-              </ul>
+                Company
+                <svg
+                  className="w-2.5 h-2.5 ms-2.5"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+
+              {isDropdownVisible && (
+                <div
+                  id="dropdownNavbar"
+                  className="bg-white font-normal rounded-lg shadow w-44"
+                >
+                  <ul
+                    className="sub-nav-list-wrapper"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li className="sub-nav-list">
+                      <NavLink
+                        className="sub-nav-link-items"
+                        to="/aboutUs"
+                        onClick={closeDropdown}
+                      >
+                        About Us
+                      </NavLink>
+                    </li>
+                    <li className="sub-nav-list">
+                      <NavLink
+                        className="sub-nav-link-items"
+                        to="/career"
+                        onClick={closeDropdown}
+                      >
+                        Career
+                      </NavLink>
+                    </li>
+                    <li className="sub-nav-list">
+                      <NavLink
+                        className="sub-nav-link-items"
+                        to="/security"
+                        onClick={closeDropdown}
+                      >
+                        Security
+                      </NavLink>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
           </li>
         </ul>

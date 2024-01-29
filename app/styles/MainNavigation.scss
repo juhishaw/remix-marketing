@@ -119,6 +119,11 @@ nav {
   cursor: pointer;
 }
 
+#dropdownNavbar {
+  position: absolute;
+  top: 76px;
+}
+
 @include respond-between(mobile, desktop) {
   nav {
     justify-content: space-between;

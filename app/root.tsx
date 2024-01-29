@@ -57,8 +57,7 @@ export default function App() {
         <footer>
           <FooterSection />
         </footer>
-        <script src="https://unpkg.com/@themesberg/flowbite@latest/dist/flowbite.bundle.js"></script>
-      </body>
+        </body>
     </html>
   );
 }

@@ -111,6 +111,11 @@ nav .sub-nav-list-wrapper .sub-nav-list:hover {
   cursor: pointer;
 }
 
+#dropdownNavbar {
+  position: absolute;
+  top: 76px;
+}
+
 @media (min-width: 425px) and (max-width: 1199px) {
   nav {
     justify-content: space-between;
