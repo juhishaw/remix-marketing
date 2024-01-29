@@ -11,12 +11,20 @@ export default function FooterSection() {
             <div className="grad-txt">sales&#64;web3firewall.xyz</div>
           </h6>
           <div className="icon-grp">
-            <Link to="https://www.linkedin.com/company/web3firewall/">
+            <a
+              href="https://www.linkedin.com/company/web3firewall/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="grad-txt icon-lkdn"></span>
-            </Link>
-            <Link to="https://twitter.com/?lang=en">
+            </a>
+            <a
+              href="https://twitter.com/?lang=en"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="grad-txt icon-twitter"></span>
-            </Link>
+            </a>
           </div>
         </div>
         <div className="right">
