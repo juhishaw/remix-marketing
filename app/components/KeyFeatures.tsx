@@ -49,7 +49,7 @@ export default function KeyFeatures() {
         {features.map((item, index) => (
           <li key={index} >
             <div className="icon-wrapper">
-              <div className={item.icon + ' icon'}></div>
+              <div className={item.icon + ' icon'} aria-label={item.name}></div>
             </div>
             <div className="right">
               <h4 className="title">{item.name}</h4>

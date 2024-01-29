@@ -249,7 +249,83 @@
   }
 }
 
-@include respond-between(mobile, desktop) {
+@include respond-between(mobile, md-mobile) {
+  .about-us-wrapper {
+    .about-us-container {
+      display: flex;
+      flex-direction: column;
+      .banner {
+        display: none;
+      }
+      .left-group {
+        .summary {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .our-values-wrapper {
+    margin: 40px 15px;
+    h3 {
+      width: 100%;
+    }
+    .value-listing {
+      ul {
+        display: flex;
+        flex-direction: column;
+      }
+      .value-listing-items {
+        .right {
+          align-items: center;
+          .summary {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .leadership-wrapper {
+    padding: 20px;
+    h1 {
+      margin-bottom: 20px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      &.leadership-grid {
+        li {
+          width: 100%;
+          margin-right: 0;
+          &:nth-child(4) {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  .join-team-wrapper {
+    margin-top: 20px;
+    margin-bottom: 0;
+    h3 {
+      text-align: center;
+    }
+  }
+
+  .value-listing {
+    ul {
+      li {
+        width: 100%;
+        margin-right: 0;
+        &:nth-child(4) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@include respond-between(md-mobile, desktop) {
   .about-us-wrapper {
     .about-us-container {
       display: flex;

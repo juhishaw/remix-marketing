@@ -1,4 +1,13 @@
-const Card = ({ name, icon, summary, style, isFlip, flipTxt, handleFlip }) => (
+interface CardProps {
+  name: string;
+  icon: string;
+  summary: string;
+  style: string;
+  isFlip: boolean;
+  flipTxt: string[];
+}
+
+const Card = ({ name, icon, summary, style, isFlip, flipTxt }: CardProps) => (
   <li className={style + " flip-card" + (isFlip ? " flip" : " ")}>
     <div className="flip-card-inner">
       <div className="flip-card-front">

@@ -1,5 +1,8 @@
-const BannerWrapper = ({ handleFlip }) => {
-  const createLinkSpan = (text) => (
+interface LandingPageProps {
+  handleFlip: (text: string) => void;
+}
+const BannerWrapper = ({ handleFlip }: LandingPageProps) => {
+  const createLinkSpan = (text: string) => (
     <span className="link" onClick={() => handleFlip(text)}>
       {text.toLowerCase()}
     </span>

@@ -216,7 +216,66 @@ MEDIA QUERIES MIXIN
   margin: 32px 0;
 }
 
-@media (min-width: 599px) and (max-width: 1199px) {
+@media (min-width: 425px) and (max-width: 699px) {
+  .about-us-wrapper .about-us-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-us-wrapper .about-us-container .banner {
+    display: none;
+  }
+  .about-us-wrapper .about-us-container .left-group .summary {
+    text-align: center;
+  }
+  .our-values-wrapper {
+    margin: 40px 15px;
+  }
+  .our-values-wrapper h3 {
+    width: 100%;
+  }
+  .our-values-wrapper .value-listing ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .our-values-wrapper .value-listing .value-listing-items .right {
+    align-items: center;
+  }
+  .our-values-wrapper .value-listing .value-listing-items .right .summary {
+    text-align: center;
+  }
+  .leadership-wrapper {
+    padding: 20px;
+  }
+  .leadership-wrapper h1 {
+    margin-bottom: 20px;
+  }
+  .leadership-wrapper ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .leadership-wrapper ul.leadership-grid li {
+    width: 100%;
+    margin-right: 0;
+  }
+  .leadership-wrapper ul.leadership-grid li:nth-child(4) {
+    margin-bottom: 20px;
+  }
+  .join-team-wrapper {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  .join-team-wrapper h3 {
+    text-align: center;
+  }
+  .value-listing ul li {
+    width: 100%;
+    margin-right: 0;
+  }
+  .value-listing ul li:nth-child(4) {
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 700px) and (max-width: 1199px) {
   .about-us-wrapper .about-us-container {
     display: flex;
     flex-direction: column;
