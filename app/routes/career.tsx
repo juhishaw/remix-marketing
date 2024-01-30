@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link, MetaFunction } from "@remix-run/react";
 import careerStyles from "../styles/dist/Career.css";
 
 export default function CareerPage() {
@@ -21,7 +21,10 @@ export default function CareerPage() {
           </button>
           <div className="txt-btn scale-animate">
             <div className="grad-txt">
-              <Link to="https://apply.workable.com/web3firewall/" target="_blank">
+              <Link
+                to="https://apply.workable.com/web3firewall/"
+                target="_blank"
+              >
                 Browse Internships
               </Link>
             </div>
@@ -37,3 +40,14 @@ export default function CareerPage() {
 export function links() {
   return [{ rel: "stylesheet", href: careerStyles }];
 }
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Careers at Web3Firewall" },
+    {
+      name: "description",
+      content:
+        "Join our team! Explore full-time openings and internships at Web3Firewall.",
+    },
+  ];
+};

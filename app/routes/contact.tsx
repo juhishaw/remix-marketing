@@ -1,4 +1,4 @@
-import { Form, Link, json, useNavigation } from "@remix-run/react";
+import { Form, Link, MetaFunction, json, useNavigation } from "@remix-run/react";
 import RequestADemoStyles from "../styles/dist/RequestADemo.css";
 
 export async function action({ request }) {
@@ -187,3 +187,14 @@ export default function ContactPage() {
 export function links() {
   return [{ rel: "stylesheet", href: RequestADemoStyles }];
 }
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Contact Us - Web3Firewall" },
+    {
+      name: "description",
+      content:
+        "Get in touch with Web3Firewall. Request a demo and learn how we can help you transact with confidence and compliance in Web3.",
+    },
+  ];
+};

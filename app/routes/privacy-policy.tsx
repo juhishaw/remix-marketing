@@ -1,5 +1,6 @@
 import { LinksFunction } from "@remix-run/node";
 import PrivacyPolicyStyles from "../styles/dist/PrivacyPolicy.css";
+import { MetaFunction } from "@remix-run/react";
 
 export default function PrivacyPolicyPage() {
   return (
@@ -369,4 +370,15 @@ export default function PrivacyPolicyPage() {
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: PrivacyPolicyStyles }];
+};
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Web3Firewall Privacy Policy" },
+    {
+      name: "description",
+      content:
+        "Read our privacy policy to understand how Web3Firewall collects, protects, and uses your personally identifiable information.",
+    },
+  ];
 };

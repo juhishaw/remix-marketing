@@ -14,6 +14,10 @@ input {
   padding: 15px;
   padding-left: 55px;
 }
+input:focus-visible, input:active, input:focus {
+  border: 1px solid #e7eaee;
+  outline: none;
+}
 
 textarea {
   display: flex;
@@ -31,6 +35,10 @@ textarea.social-txtarea {
 }
 textarea.msg-txtarea {
   height: 140px;
+}
+textarea:focus-visible, textarea:active, textarea:focus {
+  border: 1px solid #e7eaee;
+  outline: none;
 }
 
 label {
@@ -122,6 +130,10 @@ MEDIA QUERIES MIXIN
   padding-left: 22%;
   background-color: #fff;
 }
+.contact-page-wrapper input:focus-visible, .contact-page-wrapper input:active, .contact-page-wrapper input:focus {
+  border: 1px solid #e7eaee;
+  outline: none;
+}
 .contact-page-wrapper textarea {
   background-color: #fff;
 }
@@ -131,6 +143,10 @@ MEDIA QUERIES MIXIN
 }
 .contact-page-wrapper textarea.msg-txtarea {
   height: 140px;
+}
+.contact-page-wrapper textarea:focus-visible, .contact-page-wrapper textarea:active, .contact-page-wrapper textarea:focus {
+  border: 1px solid #e7eaee;
+  outline: none;
 }
 .contact-page-wrapper .conatct-list-wrapper {
   position: relative;

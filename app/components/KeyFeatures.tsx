@@ -1,3 +1,5 @@
+import { Link } from "@remix-run/react";
+
 export default function KeyFeatures() {
   const features = [
     {
@@ -47,9 +49,9 @@ export default function KeyFeatures() {
       <h2>Key Features</h2>
       <ul className="key-feature-list grid grid-cols-2 gap-4 xl:container xl:mx-auto">
         {features.map((item, index) => (
-          <li key={index} >
+          <li key={index}>
             <div className="icon-wrapper">
-              <div className={item.icon + ' icon'} aria-label={item.name}></div>
+              <div className={item.icon + " icon"} aria-label={item.name}></div>
             </div>
             <div className="right">
               <h4 className="title">{item.name}</h4>
@@ -60,7 +62,7 @@ export default function KeyFeatures() {
       </ul>
       <div className="button-wrapper flex items-center justify-center w-100">
         <button className="py-4 px-6 text-base font-normal full-btn">
-          Sign Up for Early Access
+          <Link to="/contact">Sign Up for Early Access</Link>
         </button>
       </div>
     </div>

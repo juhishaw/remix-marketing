@@ -5,6 +5,7 @@ import {
   Links,
   LiveReload,
   Meta,
+  MetaFunction,
   Outlet,
   Scripts,
   ScrollRestoration,
@@ -87,3 +88,13 @@ export function ErrorBoundary({ error }) {
     </html>
   );
 }
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Web3Firewall" },
+    { name: "description", content: "Web3Firewall" },
+  ];
+};
+
+
+

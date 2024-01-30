@@ -1,5 +1,6 @@
 import { LinksFunction } from "@remix-run/node";
 import securityStyles from "../styles/dist/Security.css";
+import { MetaFunction } from "@remix-run/react";
 
 export default function SecurityPage() {
   const security = [
@@ -97,3 +98,15 @@ export default function SecurityPage() {
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: securityStyles }];
 };
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Web3Firewall Security" },
+    {
+      name: "description",
+      content:
+        "Learn about the security measures and practices implemented by Web3Firewall to protect customer data and ensure platform integrity.",
+    },
+  ];
+};
+

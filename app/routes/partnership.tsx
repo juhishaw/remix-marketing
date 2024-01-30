@@ -2,6 +2,7 @@ import ContactForm from "~/components/ContactForm";
 import contactFormStyles from "../styles/dist/ContactForm.css";
 import { LinksFunction, json } from "@remix-run/node";
 import partnershipStyles from "../styles/dist/Partnership.css";
+import { MetaFunction } from "@remix-run/react";
 
 export async function action({ request }) {
   const formData = await request.formData();
@@ -72,3 +73,15 @@ export const links: LinksFunction = () => {
     { rel: "stylesheet", href: partnershipStyles },
   ];
 };
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Web3Firewall Partnership - Join Our Partner Network" },
+    {
+      name: "description",
+      content:
+        "Join the Web3Firewall Partner Network and help companies eliminate fraud in their digital transactions through Governance, Risk Management, and Compliance.",
+    },
+  ];
+};
+

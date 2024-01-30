@@ -2,6 +2,7 @@ import OurValuesSection from "~/components/OurValues";
 import aboutUsStyles from "../styles/dist/Aboutus.css";
 import LeadershipSection from "~/components/Leadership";
 import JoinTeamSection from "~/components/JoinTeam";
+import { MetaFunction } from "@remix-run/react";
 export default function AboutUsPage() {
   return (
     <>
@@ -44,3 +45,14 @@ export default function AboutUsPage() {
 export function links() {
   return [{ rel: "stylesheet", href: aboutUsStyles }];
 }
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "About Us - Web3Firewall" },
+    {
+      name: "description",
+      content:
+        "Learn about our mission, values, leadership, and how to join our team.",
+    },
+  ];
+};

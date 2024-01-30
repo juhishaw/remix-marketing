@@ -17,6 +17,10 @@
     padding: 12px;
     padding-left: 22%;
     background-color: #fff;
+    &:focus-visible, &:active, &:focus {
+      border: 1px solid #e7eaee;
+      outline: none;
+    }
   }
 
   textarea {
@@ -27,6 +31,10 @@
     }
     &.msg-txtarea {
       height: 140px;
+    }
+    &:focus-visible, &:active, &:focus {
+      border: 1px solid #e7eaee;
+      outline: none;
     }
   }
   .conatct-list-wrapper {

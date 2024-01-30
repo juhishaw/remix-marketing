@@ -7,7 +7,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  padding: 26px;
+  padding: 20px;
   background: #fff;
 }
 nav .expand-btn {
@@ -26,7 +26,7 @@ nav .nav-list-wrapper .nav-list {
   justify-content: flex-start;
 }
 nav .nav-list-wrapper .nav-list .nav-link-list, nav .nav-list-wrapper .nav-list .sub-nav-list-wrapper .sub-nav-list, nav .sub-nav-list-wrapper .nav-list-wrapper .nav-list .sub-nav-list {
-  color: var(--Gray-900, #131316);
+  color: #131316;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -42,16 +42,33 @@ nav .nav-list-wrapper .nav-list .nav-link-list:hover, nav .nav-list-wrapper .nav
 nav .nav-list-wrapper .nav-list .nav-link-list .active, nav .nav-list-wrapper .nav-list .sub-nav-list-wrapper .sub-nav-list .active, nav .sub-nav-list-wrapper .nav-list-wrapper .nav-list .sub-nav-list .active {
   position: relative;
 }
-nav .nav-list-wrapper .nav-list .nav-link-list .active::before, nav .nav-list-wrapper .nav-list .sub-nav-list-wrapper .sub-nav-list .active::before, nav .sub-nav-list-wrapper .nav-list-wrapper .nav-list .sub-nav-list .active::before {
+nav .nav-list-wrapper .nav-list .nav-link-list .nav-link-item, nav .nav-list-wrapper .nav-list .sub-nav-list-wrapper .sub-nav-list .nav-link-item, nav .sub-nav-list-wrapper .nav-list-wrapper .nav-list .sub-nav-list .nav-link-item {
+  position: relative;
+}
+nav .nav-list-wrapper .nav-list .nav-link-list .nav-link-item.active::before, nav .nav-list-wrapper .nav-list .sub-nav-list-wrapper .sub-nav-list .nav-link-item.active::before, nav .sub-nav-list-wrapper .nav-list-wrapper .nav-list .sub-nav-list .nav-link-item.active::before {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -38px;
   height: 2px;
   width: 100%;
-  background: var(--w3f-gradient, linear-gradient(92deg, #12CAF3 4.52%, #3E8DF7 99.48%));
+  background: var(--w3f-gradient, linear-gradient(92deg, #12caf3 4.52%, #3e8df7 99.48%));
+}
+nav .nav-list-wrapper .nav-list .nav-link-list .nav-link-item.active::after, nav .nav-list-wrapper .nav-list .sub-nav-list-wrapper .sub-nav-list .nav-link-item.active::after, nav .sub-nav-list-wrapper .nav-list-wrapper .nav-list .sub-nav-list .nav-link-item.active::after {
+  content: " ";
+  background: url("app/assets/nav-bg.png");
+  background-size: initial;
+  background-position: center;
+  position: absolute;
+  left: 0;
+  bottom: -36px;
+  height: 100px;
+  width: 100%;
 }
 nav .sub-nav-list-wrapper .sub-nav-list {
   padding: 10px;
+}
+nav .sub-nav-list-wrapper .sub-nav-list .sub-nav-link-items.active {
+  color: #fd7702;
 }
 nav .sub-nav-list-wrapper .sub-nav-list:hover {
   color: #fd7702;
@@ -103,7 +120,8 @@ nav .sub-nav-list-wrapper .sub-nav-list:hover {
   margin-bottom: 16px;
 }
 
-.icon-hamburger, .icon-close {
+.icon-hamburger,
+.icon-close {
   background: linear-gradient(92deg, #3dd5f7 4.52%, #3e8df7 99.48%);
   background-clip: text;
   -webkit-background-clip: text;
