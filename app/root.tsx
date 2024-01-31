@@ -58,7 +58,7 @@ export default function App() {
         <footer>
           <FooterSection />
         </footer>
-        </body>
+      </body>
     </html>
   );
 }
@@ -77,9 +77,9 @@ export function ErrorBoundary({ error }) {
         </header>
         <main className="error xl:container xl:mx-auto flex items-center justify-center flex-col">
           <h1>An error occurred!</h1>
-          <button className="full-btn  py-4 px-6 text-base font-normal">
-            <Link to='/'>Back to Safety!</Link>
-          </button>
+          <Link to="/" className="full-btn  py-4 px-6 text-base font-normal">
+            Back to Safety!
+          </Link>
         </main>
         <ScrollRestoration />
         <Scripts />
@@ -95,6 +95,3 @@ export const meta: MetaFunction = () => {
     { name: "description", content: "Web3Firewall" },
   ];
 };
-
-
-

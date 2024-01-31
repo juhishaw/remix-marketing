@@ -10,6 +10,7 @@ import { Link } from "@remix-run/react";
 import Card from "./Card";
 import BannerWrapper from "./BannerWrapper";
 // import ParticlesSection from "./Particle";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function LandingPage() {
   const [data, setData] = useState(cardData);
@@ -38,9 +39,16 @@ export default function LandingPage() {
             your business from evolving threats.
           </h3>
           <div className="button-wrapper">
-            <button className="py-4 px-6 text-base font-normal full-btn">
-              <Link to="/contact">Sign Up for Early Access</Link>
-            </button>
+            <ScrollLink
+              to="contact-wrapper"
+              spy={true}
+              smooth={true}
+              duration={500}
+              offset={-110}
+              className="py-4 px-6 text-base font-normal full-btn"
+            >
+              Sign Up for Early Access
+            </ScrollLink>
           </div>
         </div>
         <div className="bg-no-repeat bg-contain banner"></div>
@@ -49,13 +57,16 @@ export default function LandingPage() {
       <div className="main-module-wrapper">
         <ul className="modules-wrapper xl:container xl:mx-auto grid grid-cols-3">
           {data.map((card, index) => (
-            <Card key={index} {...card} handleFlip={handleFlip} />
+            <Card key={index} {...card} />
           ))}
         </ul>
       </div>
       <BannerWrapper handleFlip={handleFlip} />
       <KeyFeatures />
-      <div className="contact-wrapper grid grid-cols-2 gap-4 xl:container xl:mx-auto">
+      <div
+        id="contact-wrapper"
+        className="contact-wrapper grid grid-cols-2 gap-4 xl:container xl:mx-auto"
+      >
         <div className="bg"></div>
         <div className="left">
           <h1>Ready to take back your time?</h1>
@@ -70,7 +81,7 @@ export default function LandingPage() {
           </h6>
           <h6 className="info-card">
             <span className="icon icon-email-1"></span>
-            sales@web3firewall.xyz
+            <a href="mailto:sales@web3firewall.xyz">sales@web3firewall.xyz</a>
           </h6>
           <h6 className="info-card">
             <span className="icon icon-address"></span>San Francisco, CA

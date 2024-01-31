@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link as ScrollLink } from "react-scroll";
 
 export default function KeyFeatures() {
   const features = [
@@ -61,9 +61,16 @@ export default function KeyFeatures() {
         ))}
       </ul>
       <div className="button-wrapper flex items-center justify-center w-100">
-        <button className="py-4 px-6 text-base font-normal full-btn">
-          <Link to="/contact">Sign Up for Early Access</Link>
-        </button>
+        <ScrollLink
+          to="contact-wrapper"
+          spy={true}
+          smooth={true}
+          duration={500}
+          offset={-110} 
+          className="py-4 px-6 text-base font-normal full-btn"
+        >
+          Sign Up for Early Access
+        </ScrollLink>
       </div>
     </div>
   );

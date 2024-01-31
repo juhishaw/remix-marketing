@@ -10,7 +10,9 @@ export default function FooterSection() {
           <h1>Join the waiting list today.</h1>
           <h6 className="sm-txt-16 mail-section">
             <i className="icon grad-txt icon-email"></i>
-            <div className="grad-txt">sales&#64;web3firewall.xyz</div>
+            <a href="mailto:sales@web3firewall.xyz" className="grad-txt">
+              sales@web3firewall.xyz
+            </a>
           </h6>
           <div className="icon-grp">
             <SocialLink
@@ -42,12 +44,13 @@ export default function FooterSection() {
           </div>
 
           <div className="footer-button-wrapper">
-            <button
+            <Link
+              to="/contact"
               type="button"
               className="py-4 px-6 text-base font-bold ghost-btn"
             >
-              <Link to="/contact">Request a Demo</Link>
-            </button>
+              Request a Demo
+            </Link>
           </div>
         </div>
       </div>

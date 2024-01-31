@@ -78,12 +78,13 @@ MEDIA QUERIES MIXIN
   color: rgba(1, 12, 28, 0.9);
   margin-top: 8px;
 }
-.key-features-wrapper .button-wrapper button {
+.key-features-wrapper .button-wrapper a {
   margin-top: 40px;
   position: relative;
   width: 487px;
+  text-align: center;
 }
-.key-features-wrapper .button-wrapper button::after {
+.key-features-wrapper .button-wrapper a::after {
   content: "";
   position: absolute;
   background: url("app/assets/arrow-white.svg");
@@ -124,6 +125,9 @@ MEDIA QUERIES MIXIN
     margin-right: 0;
     margin-bottom: 5px;
   }
+  .key-features-wrapper .button-wrapper a {
+    width: 100%;
+  }
   .key-features-wrapper .button-wrapper button::after {
     right: 10%;
   }
@@ -152,6 +156,9 @@ MEDIA QUERIES MIXIN
   .key-features-wrapper .key-feature-list li .icon-wrapper {
     margin-right: 0;
     margin-bottom: 5px;
+  }
+  .key-features-wrapper .button-wrapper a {
+    width: 100%;
   }
   .key-features-wrapper .button-wrapper button::after {
     right: 10%;

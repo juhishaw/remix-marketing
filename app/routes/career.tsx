@@ -13,12 +13,15 @@ export default function CareerPage() {
           We are looking for innovative individuals to join our team.
         </h3>
         <div className="button-wrapper-career">
-          <button className="py-4 px-14 text-base font-normal full-btn">
-            <Link to="https://apply.workable.com/web3firewall/" target="_blank">
-              Browse Full-time Openings
-            </Link>
+          <Link
+            to="https://apply.workable.com/web3firewall/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="py-4 px-14 text-base font-normal full-btn"
+          >
+            Browse Full-time Openings
             <span className="icon-arrow-right"></span>
-          </button>
+          </Link>
           <div className="txt-btn scale-animate">
             <div className="grad-txt">
               <Link

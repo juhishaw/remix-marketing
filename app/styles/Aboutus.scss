@@ -240,8 +240,9 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    button {
+    a {
       width: 633px;
+      text-align: center;
     }
   }
   h3 {
@@ -307,6 +308,11 @@
   .join-team-wrapper {
     margin-top: 20px;
     margin-bottom: 0;
+    .button-wrapper {
+      a {
+        width: 100%;
+      }
+    }
     h3 {
       text-align: center;
     }
@@ -378,6 +384,11 @@
   .join-team-wrapper {
     margin-top: 40px;
     margin-bottom: 0;
+    .button-wrapper {
+      a {
+        width: 100%;
+      }
+    }
     h3 {
       text-align: center;
     }

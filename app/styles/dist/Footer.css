@@ -51,8 +51,9 @@ MEDIA QUERIES MIXIN
   width: 100%;
   margin-top: 48px;
 }
-.footer .links-grp .right .footer-button-wrapper button {
+.footer .links-grp .right .footer-button-wrapper a {
   width: 100%;
+  text-align: center;
 }
 .footer .links-grp .mail-section {
   margin-bottom: 0;

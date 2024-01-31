@@ -9,9 +9,9 @@ export default function JoinTeamSection() {
         you are interested!
       </h3>
       <div className="button-wrapper flex items-center justify-center w-100">
-        <button className="py-4 px-6 text-base font-normal full-btn">
-            <Link to='/career'>Go to careers page</Link>
-        </button>
+        <Link to="/career" className="py-4 px-6 text-base font-normal full-btn">
+          Go to careers page
+        </Link>
       </div>
     </div>
   );

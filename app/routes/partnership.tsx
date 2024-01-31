@@ -53,7 +53,9 @@ export default function PartnershipPage() {
             </div>
             <div className="info-card">
               <span className="icon icon-email-1"></span>
-              sales@web3firewall.xyz
+              <a href="mailto:sales@web3firewall.xyz">
+                sales@web3firewall.xyz
+              </a>
             </div>
             <div className="info-card">
               <span className="icon icon-address"></span>San Francisco, CA
@@ -84,4 +86,3 @@ export const meta: MetaFunction = () => {
     },
   ];
 };
-

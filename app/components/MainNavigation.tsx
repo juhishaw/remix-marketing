@@ -115,9 +115,9 @@ const Dropdown = ({ closeDropdown }: CloseDropDownPros) => {
 
 const NavButton = () => (
   <div className="nav-btn-wrapper">
-    <button className="ghost-btn">
-      <Link to="/contact">Request a Demo</Link>
-    </button>
+    <Link to="/contact" className="ghost-btn">
+      Request a Demo
+    </Link>
   </div>
 );
 
@@ -138,22 +138,38 @@ const ExpandedNavList = ({ handleToggle }: ExpandButtonProps) => (
     </div>
     <ul className="nav-list-sm">
       <li>
-        <NavLink className="nav-link-item" to="/partnership">
+        <NavLink
+          className="nav-link-item"
+          to="/partnership"
+          onClick={handleToggle}
+        >
           Partnership
         </NavLink>
       </li>
       <li>
-        <NavLink className="sub-nav-link-items" to="/aboutUs">
+        <NavLink
+          className="sub-nav-link-items"
+          to="/aboutUs"
+          onClick={handleToggle}
+        >
           About Us
         </NavLink>
       </li>
       <li>
-        <NavLink className="sub-nav-link-items" to="/career">
+        <NavLink
+          className="sub-nav-link-items"
+          to="/career"
+          onClick={handleToggle}
+        >
           Career
         </NavLink>
       </li>
       <li>
-        <NavLink className="sub-nav-link-items" to="/security">
+        <NavLink
+          className="sub-nav-link-items"
+          to="/security"
+          onClick={handleToggle}
+        >
           Security
         </NavLink>
       </li>
@@ -179,7 +195,7 @@ const MainNavigation = () => {
       <NavList closeDropdown={closeDropdown} />
       <NavButton />
       <ExpandButton handleToggle={handleToggle} />
-      {isOpen && <ExpandedNavList handleToggle={handleToggle} />}
+      {isOpen && <ExpandedNavList handleToggle={closeDropdown} />}
     </nav>
   );
 };
