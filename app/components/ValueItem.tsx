@@ -10,8 +10,10 @@ const ValueItem = ({ name, icon, summary }: ValueItem) => (
       <div className="blue-icon-wrapper">
         <div className={`${icon} icon`}></div>
       </div>
-      <h4 className="title">{name}</h4>
-      <h6 className="summary">{summary}</h6>
+      <div className="group">
+        <h4 className="title">{name}</h4>
+        <h6 className="summary">{summary}</h6>
+      </div>
     </div>
   </li>
 );

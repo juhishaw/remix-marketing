@@ -127,10 +127,7 @@
       background-position: center;
     }
     .main-bg {
-      width: 100%;
-      left: auto;
-      top: auto;
-      transform: none;
+      display: none;
     }
   }
 
@@ -153,6 +150,9 @@
   .landing-wrapper {
     display: flex;
     flex-direction: column;
+    .main-bg {
+      display: none;
+    }
     .button-wrapper {
       margin-top: 40px;
       margin-left: 15px;

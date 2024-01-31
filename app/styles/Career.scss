@@ -21,6 +21,7 @@
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
+          margin-left: 8px;
         }
       }
     }
@@ -78,6 +79,7 @@
           text-align: center;
           width: 100%;
           font-size: 16px;
+          margin-top: 0;
         }
       }
       .button-wrapper-career {
@@ -110,9 +112,12 @@
         margin-top: 0;
         text-align: center;
       }
-      h3.summary {
-        text-align: center;
-        width: 100%;
+      h3 {
+        &.summary {
+          text-align: center;
+          width: 100%;
+          margin-top: 0;
+        }
       }
       .button-wrapper-career {
         display: flex;

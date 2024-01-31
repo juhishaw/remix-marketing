@@ -95,9 +95,17 @@ MEDIA QUERIES MIXIN
   .footer {
     margin: 30px;
   }
+  .footer .icon-grp {
+    margin-top: 15px;
+  }
   .footer .links-grp {
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .footer .links-grp .right .footer-button-wrapper {
+    margin-top: 20px;
   }
   .footer .links-grp h1 {
     margin-bottom: 20px;
@@ -108,9 +116,17 @@ MEDIA QUERIES MIXIN
   .footer {
     margin: 30px;
   }
+  .footer .icon-grp {
+    margin-top: 15px;
+  }
   .footer .links-grp {
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .footer .links-grp .right .footer-button-wrapper {
+    margin-top: 20px;
   }
   .footer .links-grp h1 {
     margin-bottom: 20px;

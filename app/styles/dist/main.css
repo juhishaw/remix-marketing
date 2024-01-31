@@ -312,10 +312,7 @@ h6 {
     flex-direction: column;
   }
   .contact-wrapper .bg {
-    height: 400px;
-    width: 100%;
-    left: 0;
-    top: 0;
+    display: none;
   }
   .contact-wrapper .left {
     margin-right: 0;
@@ -324,6 +321,9 @@ h6 {
     align-items: center;
     justify-content: center;
   }
+  .contact-wrapper .left .info-card {
+    width: 100%;
+  }
   .contact-wrapper .left .contanct-banner {
     background-position: center;
     height: 150px;
@@ -331,12 +331,14 @@ h6 {
   }
   .contact-wrapper .left h1 {
     font-size: 20px;
+    width: 100%;
+    text-align: left;
   }
   .contact-wrapper .left .summary {
-    text-align: center;
+    text-align: left;
   }
   .contact-wrapper .left .contanct-banner {
-    margin-top: 2%;
+    display: none;
   }
 }
 @media (min-width: 700px) and (max-width: 1199px) {
@@ -357,6 +359,9 @@ h6 {
     display: flex;
     flex-direction: column;
   }
+  .contact-wrapper .bg {
+    display: none;
+  }
   .contact-wrapper .left {
     margin-right: 0;
     display: flex;
@@ -364,14 +369,19 @@ h6 {
     align-items: center;
     justify-content: center;
   }
+  .contact-wrapper .left .info-card {
+    width: 100%;
+  }
   .contact-wrapper .left h1 {
     font-size: 48px;
+    width: 100%;
+    text-align: left;
   }
   .contact-wrapper .left .summary {
-    text-align: center;
+    text-align: left;
   }
   .contact-wrapper .left .contanct-banner {
-    margin-top: 2%;
+    display: none;
   }
 }
 .error {

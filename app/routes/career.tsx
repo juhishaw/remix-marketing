@@ -6,7 +6,7 @@ export default function CareerPage() {
     <div className="career-wrapper grid grid-cols-2 gap-4 md:container md:mx-auto">
       <div className="left-group">
         <h1>
-          Careers at <br />
+          Careers at
           <span className="grad">Web3Firewall</span>
         </h1>
         <h3 className="summary">

@@ -134,13 +134,13 @@ MEDIA QUERIES MIXIN
     padding: 20px;
   }
   .modules-wrapper .flip-card .flip-card-inner .flip-card-front .caption {
-    text-align: center;
+    text-align: left;
   }
   .modules-wrapper .flip-card .flip-card-inner .flip-card-front .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
   }
   .modules-wrapper .flip-card .flip-card-inner .flip-card-back ul li {
@@ -163,7 +163,7 @@ MEDIA QUERIES MIXIN
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100%;
   }
   .modules-wrapper .flip-card:not(:last-child) {

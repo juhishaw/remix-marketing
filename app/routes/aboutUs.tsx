@@ -23,7 +23,7 @@ export default function AboutUsPage() {
                 security. That's why we build governance, risk, and compliance
                 software that empowers everyone, from individuals to
                 institutions, to take control of their finances and transact
-                with confidence. We see a future where Web3 isn't just about
+                with confidence. <br /><br />We see a future where Web3 isn't just about
                 breaking free from old systems, but building a new one anchored
                 in accountability, transparency, and accessibility. With our
                 tools, users own their financial data, institutions navigate the

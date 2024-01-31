@@ -62,18 +62,16 @@ export default function SecurityPage() {
   ];
   return (
     <div className="security-wrapper">
-      <div className="banner">
-        <div className="left-group">
-          <h1>Security</h1>
-          <h4 className="summary text-wrap">
-            Security at Web3Firewall is managed using a layered approach that
-            reflects our commitment to protecting our customers and their
-            sensitive data. We have created a shared responsibility model that
-            outlines the controls we’ve inherited from our cloud service
-            providers (CSPs) and the security responsibility Web3Firewall has
-            for our customers.
-          </h4>
-        </div>
+      <div className="banner-wrraper">
+        <h1>Security</h1>
+        <h4 className="summary text-wrap">
+          Security at Web3Firewall is managed using a layered approach that
+          reflects our commitment to protecting our customers and their
+          sensitive data. We have created a shared responsibility model that
+          outlines the controls we’ve inherited from our cloud service providers
+          (CSPs) and the security responsibility Web3Firewall has for our
+          customers.
+        </h4>
       </div>
       <ul className="security-listing md:container md:mx-auto">
         {security.map((item, index) => (
@@ -109,4 +107,3 @@ export const meta: MetaFunction = () => {
     },
   ];
 };
-

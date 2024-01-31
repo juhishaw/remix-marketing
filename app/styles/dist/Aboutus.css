@@ -223,10 +223,12 @@ MEDIA QUERIES MIXIN
     flex-direction: column;
   }
   .about-us-wrapper .about-us-container .banner {
-    display: none;
+    height: 300px;
+    width: 100%;
+    background-position: center;
   }
   .about-us-wrapper .about-us-container .left-group .summary {
-    text-align: center;
+    text-align: left;
   }
   .our-values-wrapper {
     margin: 40px 15px;
@@ -238,14 +240,23 @@ MEDIA QUERIES MIXIN
     display: flex;
     flex-direction: column;
   }
+  .our-values-wrapper .value-listing .value-listing-items {
+    padding: 15px;
+  }
   .our-values-wrapper .value-listing .value-listing-items .right {
-    align-items: center;
+    flex-direction: row;
+  }
+  .our-values-wrapper .value-listing .value-listing-items .right .blue-icon-wrapper {
+    min-width: 100px;
+    max-width: 100px;
+    margin-right: 15px;
   }
   .our-values-wrapper .value-listing .value-listing-items .right .summary {
-    text-align: center;
+    text-align: left;
   }
   .leadership-wrapper {
-    padding: 20px;
+    margin: 40px 15px;
+    padding: 15px;
   }
   .leadership-wrapper h1 {
     margin-bottom: 20px;
@@ -285,7 +296,9 @@ MEDIA QUERIES MIXIN
     flex-direction: column;
   }
   .about-us-wrapper .about-us-container .banner {
-    display: none;
+    height: 200px;
+    width: 100%;
+    background-position: center;
   }
   .our-values-wrapper {
     margin: 80px 30px;
@@ -297,14 +310,23 @@ MEDIA QUERIES MIXIN
     display: flex;
     flex-direction: column;
   }
+  .our-values-wrapper .value-listing .value-listing-items {
+    padding: 15px;
+  }
   .our-values-wrapper .value-listing .value-listing-items .right {
-    align-items: center;
+    flex-direction: row;
+  }
+  .our-values-wrapper .value-listing .value-listing-items .right .blue-icon-wrapper {
+    min-width: 100px;
+    max-width: 100px;
+    margin-right: 15px;
   }
   .our-values-wrapper .value-listing .value-listing-items .right .summary {
     text-align: center;
   }
   .leadership-wrapper {
     padding: 40px;
+    margin: 40px 15px;
   }
   .leadership-wrapper h1 {
     margin-bottom: 40px;

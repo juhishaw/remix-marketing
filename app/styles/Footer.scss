@@ -96,9 +96,19 @@
 @include respond-between(mobile, md-mobile) {
   .footer {
     margin: 30px;
+    .icon-grp {
+      margin-top: 15px;
+    }
     .links-grp {
       display: flex;
       flex-direction: column;
+      padding: 20px;
+      border-radius: 10px;
+      .right {
+        .footer-button-wrapper {
+          margin-top: 20px;
+        }
+      }
       h1 {
         margin-bottom: 20px;
         width: 100%;
@@ -110,9 +120,19 @@
 @include respond-between(md-mobile, desktop) {
   .footer {
     margin: 30px;
+    .icon-grp {
+      margin-top: 15px;
+    }
     .links-grp {
       display: flex;
       flex-direction: column;
+      padding: 20px;
+      border-radius: 10px;
+      .right {
+        .footer-button-wrapper {
+          margin-top: 20px;
+        }
+      }
       h1 {
         margin-bottom: 20px;
         width: 100%;

@@ -24,6 +24,7 @@ MEDIA QUERIES MIXIN
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-left: 8px;
 }
 .career-wrapper .left-group h3.summary {
   color: #010c1c;
@@ -74,6 +75,7 @@ MEDIA QUERIES MIXIN
     text-align: center;
     width: 100%;
     font-size: 16px;
+    margin-top: 0;
   }
   .career-wrapper .left-group .button-wrapper-career {
     display: flex;
@@ -107,6 +109,7 @@ MEDIA QUERIES MIXIN
   .career-wrapper .left-group h3.summary {
     text-align: center;
     width: 100%;
+    margin-top: 0;
   }
   .career-wrapper .left-group .button-wrapper-career {
     display: flex;

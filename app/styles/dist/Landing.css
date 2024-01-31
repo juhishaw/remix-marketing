@@ -126,10 +126,7 @@ MEDIA QUERIES MIXIN
     background-position: center;
   }
   .landing-wrapper .main-bg {
-    width: 100%;
-    left: auto;
-    top: auto;
-    transform: none;
+    display: none;
   }
   .bg-container .right-bg {
     right: 0;
@@ -145,6 +142,9 @@ MEDIA QUERIES MIXIN
   .landing-wrapper {
     display: flex;
     flex-direction: column;
+  }
+  .landing-wrapper .main-bg {
+    display: none;
   }
   .landing-wrapper .button-wrapper {
     margin-top: 40px;
