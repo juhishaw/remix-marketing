@@ -20,7 +20,7 @@ export default function FooterSection() {
               iconClass="icon-lkdn"
             />
             <SocialLink
-              href="https://twitter.com/?lang=en"
+               href="https://twitter.com/web3firewall"
               iconClass="icon-twitter"
             />
           </div>

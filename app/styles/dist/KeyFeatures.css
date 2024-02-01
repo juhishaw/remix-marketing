@@ -78,13 +78,14 @@ MEDIA QUERIES MIXIN
   color: rgba(1, 12, 28, 0.9);
   margin-top: 8px;
 }
-.key-features-wrapper .button-wrapper a {
+.key-features-wrapper .button-wrapper .full-btn {
   margin-top: 40px;
   position: relative;
   width: 487px;
   text-align: center;
+  cursor: pointer;
 }
-.key-features-wrapper .button-wrapper a::after {
+.key-features-wrapper .button-wrapper .full-btn::after {
   content: "";
   position: absolute;
   background: url("app/assets/arrow-white.svg");
@@ -124,14 +125,14 @@ MEDIA QUERIES MIXIN
     margin-right: 16px;
     margin-bottom: 5px;
   }
-  .key-features-wrapper .button-wrapper a {
+  .key-features-wrapper .button-wrapper .full-btn {
     width: 100%;
   }
-  .key-features-wrapper .button-wrapper a::after {
+  .key-features-wrapper .button-wrapper .full-btn::after {
     content: none;
   }
 }
-@media (min-width: 700px) and (max-width: 1199px) {
+@media (min-width: 425px) and (max-width: 699px) and (min-width: 700px) and (max-width: 1199px) {
   .key-features-wrapper {
     margin: 20px;
     padding: 20px;
@@ -156,10 +157,10 @@ MEDIA QUERIES MIXIN
     margin-right: 16px;
     margin-bottom: 5px;
   }
-  .key-features-wrapper .button-wrapper a {
+  .key-features-wrapper .button-wrapper .full-btn {
     width: 100%;
   }
-  .key-features-wrapper .button-wrapper a::after {
+  .key-features-wrapper .button-wrapper .full-btn::after {
     content: none;
   }
 }

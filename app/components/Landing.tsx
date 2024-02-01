@@ -30,7 +30,7 @@ export default function LandingPage() {
         {/* <ParticlesSection /> */}
         <div className="left-group">
           <h1>
-            <span className="grad">Risk & Compliance AI</span> <br />
+            <span className="grad">Risk & Compliance AI</span> 
             for Web3
           </h1>
           <h3 className="summary xl:w-4/5">

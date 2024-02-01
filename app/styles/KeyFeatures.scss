@@ -92,11 +92,12 @@
     }
   }
   .button-wrapper {
-    a {
+    .full-btn {
       margin-top: 40px;
       position: relative;
       width: 487px;
       text-align: center;
+      cursor: pointer;
       &::after {
         content: "";
         position: absolute;
@@ -142,7 +143,7 @@
     }
 
     .button-wrapper {
-      a {
+      .full-btn {
         width: 100%;
         &::after {
           content: none;
@@ -150,41 +151,41 @@
       }
     }
   }
-}
 
-@include respond-between(md-mobile, desktop) {
-  .key-features-wrapper {
-    margin: 20px;
-    padding: 20px;
-    h2 {
-      font-size: 48px;
-      margin-bottom: 40px;
-    }
-    .key-feature-list {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+  @include respond-between(md-mobile, desktop) {
+    .key-features-wrapper {
+      margin: 20px;
+      padding: 20px;
+      h2 {
+        font-size: 48px;
+        margin-bottom: 40px;
+      }
+      .key-feature-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
 
-      li {
-        margin: 15px;
-        .right {
-          .title {
-            text-align: left;
-            width: 100%;
+        li {
+          margin: 15px;
+          .right {
+            .title {
+              text-align: left;
+              width: 100%;
+            }
+          }
+          .icon-wrapper {
+            margin-right: 16px;
+            margin-bottom: 5px;
           }
         }
-        .icon-wrapper {
-          margin-right: 16px;
-          margin-bottom: 5px;
-        }
       }
-    }
 
-    .button-wrapper {
-      a {
-        width: 100%;
-        &::after {
-          content: none;
+      .button-wrapper {
+        .full-btn {
+          width: 100%;
+          &::after {
+            content: none;
+          }
         }
       }
     }
